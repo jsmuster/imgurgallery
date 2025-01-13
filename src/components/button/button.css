@@ -1,0 +1,23 @@
+.btn {
+    border: 0;
+    background: none;
+    margin: 0;
+    outline: none;
+    padding: 0px 16px 0px 6px;
+    cursor: pointer;
+    border-radius: var(--Corner-Radius-Btn-Icn-M, 6px);
+}
+.btn--blue {
+    color: var(--Color-Button-Text-BtnT-Value-Default, #1439b8);
+    text-align: center;
+}
+
+.size--40 {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

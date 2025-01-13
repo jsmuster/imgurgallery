@@ -1,0 +1,14 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0px;
+}
+
+.home-page--content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 244px);
+    width: 100%;
+    justify-content: center;
+    padding: 32px;
+}

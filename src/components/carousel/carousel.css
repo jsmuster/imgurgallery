@@ -1,0 +1,96 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.carousel-images {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: auto;
+}
+.carousel-image {
+    position: absolute;
+    inset: 0;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+
+    padding: 16px 96px;
+    padding-bottom: 48px;
+    --carousel-translate-y: 0;
+    transform: translate(var(--carousel-translate-x), var(--carousel-translate-y));
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-image-0 {
+    --carousel-translate-x: 0;
+}
+
+.carousel-image-full {
+    --carousel-translate-x: 100%;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.carousel-prev-btn {
+    all: unset;
+
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+.carousel-next-btn {
+    all: unset;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(50%, -50%);
+}
+
+.carousel-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100%;
+}
+.carousel-wrapper:has(.sidebar-content) {
+    grid-template-columns: 1fr 0.5fr;
+}
+.carousel:not(:has(.sidebar-content)) .sidebar {
+    padding: 0;
+    min-width: 0;
+}
+.carousel:not(:has(.sidebar-content)) .sidebar-header {
+    left: -96px;
+}
+.carousel:has(.sidebar-content) .sidebar-header {
+    width: calc(100% - 16px);
+    left: 0px;
+}
+
+.carousel-prev-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-100%, 0);
+}
+.carousel-next-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(100%, 0);
+}
